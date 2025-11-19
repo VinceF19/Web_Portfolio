@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Raphael Vince S. Fernandez – Information Systems student specializing in Flutter, GIS, and ERP systems."
+    />
+    <title>Raphael Vince S. Fernandez | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="hero">
+      <img
+        class="hero__bg"
+        src="../assets/BG-hero.jpg"
+        alt="Abstract dark background"
+        loading="lazy"
+      />
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Information Systems • Full-Stack Dev • GIS + ERP Systems</p>
+        <h1 class="hero__title">Raphael Vince S. Fernandez</h1>
+        <p class="hero__subtitle">
+          I build tailored dashboards, transactional systems, and modern applications using Flutter, Supabase, and data-driven tooling.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section about" id="about">
+        <div class="section__content">
+          <p class="section__eyebrow">About</p>
+          <h2>About Me</h2>
+          <p>
+            I am a 4th-year Information Systems student specializing in GIS, ERP systems, and full-stack development using Flutter + Supabase.
+            I create performant digital tools with clear UX, data visibility, and business logic that teams can maintain.
+          </p>
+          <p>
+            My work includes dashboards, transactional systems, business applications, and academic capstone platforms—always with a clean and
+            minimalist approach.
+          </p>
+        </div>
+      </section>
+
+      <section class="section marquee-section" aria-label="Tools carousel">
+        <div class="marquee">
+          <div class="marquee__track">
+            <img src="../assets/1.svg" alt="Technology 1" />
+            <img src="../assets/2.svg" alt="Technology 2" />
+            <img src="../assets/3.svg" alt="Technology 3" />
+            <img src="../assets/4.svg" alt="Technology 4" />
+            <img src="../assets/5.svg" alt="Technology 5" />
+          </div>
+          <div class="marquee__track" aria-hidden="true">
+            <img src="../assets/1.svg" alt="" />
+            <img src="../assets/2.svg" alt="" />
+            <img src="../assets/3.svg" alt="" />
+            <img src="../assets/4.svg" alt="" />
+            <img src="../assets/5.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section__content">
+          <p class="section__eyebrow">Projects</p>
+          <h2>Featured Projects</h2>
+          <div class="projects__grid">
+            <article class="project-card">
+              <h3>GoDavao – Ridesharing App</h3>
+              <p>Flutter • OSRM Routing • Dijkstra Algorithm • Live Tracking • Dynamic Pricing</p>
+            </article>
+            <article class="project-card">
+              <h3>Maviken ERP System</h3>
+              <p>CRM • Order Entry • Delivery Receipts • Billing • Maintenance • Expenses</p>
+            </article>
+            <article class="project-card">
+              <h3>PylonEnergyCorp Website</h3>
+              <p>WordPress • Hostinger • Landing Page • Google Maps • Contact Form</p>
+            </article>
+            <article class="project-card">
+              <h3>SK Portal</h3>
+              <p>HTML/CSS/JS • Project Showcase • Facebook API Auto-Fetch</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section__content">
+          <p class="section__eyebrow">Skills</p>
+          <h2>Capabilities</h2>
+          <div class="skills__list">
+            <div class="skill" data-skill="90">
+              <div class="skill__label">Flutter Development</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="85">
+              <div class="skill__label">API Integrations (REST, Supabase)</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="88">
+              <div class="skill__label">Supabase / PostgreSQL</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="83">
+              <div class="skill__label">ERP &amp; Business Systems</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="80">
+              <div class="skill__label">Metabase Dashboards</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="78">
+              <div class="skill__label">UI/UX &amp; Web Design</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+            <div class="skill" data-skill="72">
+              <div class="skill__label">WordPress Deployment</div>
+              <div class="skill__track"><span class="skill__value"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section__content">
+          <p class="section__eyebrow">Contact</p>
+          <h2>Let's Connect</h2>
+          <form class="contact__form">
+            <label>
+              <span>Your Name</span>
+              <input type="text" name="name" placeholder="Juan Dela Cruz" required />
+            </label>
+            <label>
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="name@email.com" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> Raphael Vince S. Fernandez • Crafted with Flutter-inspired styling</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
