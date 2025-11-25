@@ -16,146 +16,215 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav__content">
+        <a href="#hero" class="nav__logo">Vince</a>
+        <div class="nav__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
     <header class="hero" id="hero">
       <img
         class="hero__bg"
-        src="../assets/BG-hero.jpg"
+        src="assets/BG-hero.jpg"
         alt="Abstract dark background"
         loading="lazy"
       />
       <div class="hero__overlay"></div>
-      <div class="hero__content">
+      <div class="hero__content reveal">
         <p class="hero__eyebrow">Information Systems • Full-Stack Dev • GIS + ERP Systems</p>
         <h1 class="hero__title">Raphael Vince S. Fernandez</h1>
         <p class="hero__subtitle">
-          I build tailored dashboards, transactional systems, and modern applications using Flutter, Supabase, and data-driven tooling.
+          👋 Hi, I’m Vince. I build fast, scalable systems that solve real business problems.
         </p>
       </div>
     </header>
 
     <main>
-      <section class="section about" id="about">
+      <!-- ABOUT -->
+      <section class="section about reveal" id="about">
         <div class="section__content">
           <p class="section__eyebrow">About</p>
           <h2>About Me</h2>
           <p>
-            I am a 4th-year Information Systems student specializing in GIS, ERP systems, and full-stack development using Flutter + Supabase.
-            I create performant digital tools with clear UX, data visibility, and business logic that teams can maintain.
+            I am a 4th-year Information Systems student specializing in GIS, ERP systems,
+            and full-stack development using Flutter + Supabase.
           </p>
           <p>
-            My work includes dashboards, transactional systems, business applications, and academic capstone platforms—always with a clean and
-            minimalist approach.
+            My work includes dashboards, transactional systems, business applications, and
+            academic capstone platforms—always with a clean and minimalist approach.
           </p>
         </div>
       </section>
 
-      <section class="section marquee-section" aria-label="Tools carousel">
+      <!-- MARQUEE -->
+      <section class="section marquee-section reveal" aria-label="Tools carousel">
         <div class="marquee">
           <div class="marquee__track">
-            <img src="../assets/1.svg" alt="Technology 1" />
-            <img src="../assets/2.svg" alt="Technology 2" />
-            <img src="../assets/3.svg" alt="Technology 3" />
-            <img src="../assets/4.svg" alt="Technology 4" />
-            <img src="../assets/5.svg" alt="Technology 5" />
-          </div>
-          <div class="marquee__track" aria-hidden="true">
-            <img src="../assets/1.svg" alt="" />
-            <img src="../assets/2.svg" alt="" />
-            <img src="../assets/3.svg" alt="" />
-            <img src="../assets/4.svg" alt="" />
-            <img src="../assets/5.svg" alt="" />
+            <img src="assets/1.svg" alt="Tool icon" />
+            <img src="assets/2.svg" alt="Tool icon" />
+            <img src="assets/3.svg" alt="Tool icon" />
+            <img src="assets/4.svg" alt="Tool icon" />
+            <img src="assets/5.svg" alt="Tool icon" />
+            <img src="assets/1.svg" alt="" aria-hidden="true" />
+            <img src="assets/2.svg" alt="" aria-hidden="true" />
+            <img src="assets/3.svg" alt="" aria-hidden="true" />
+            <img src="assets/4.svg" alt="" aria-hidden="true" />
+            <img src="assets/5.svg" alt="" aria-hidden="true" />
           </div>
         </div>
       </section>
 
+      <!-- PROJECTS -->
       <section class="section projects" id="projects">
         <div class="section__content">
           <p class="section__eyebrow">Projects</p>
-          <h2>Featured Projects</h2>
-          <div class="projects__grid">
-            <article class="project-card">
-              <h3>GoDavao – Ridesharing App</h3>
-              <p>Flutter • OSRM Routing • Dijkstra Algorithm • Live Tracking • Dynamic Pricing</p>
+          <h2 class="reveal">Featured Projects</h2>
+
+          <div class="feature-projects reveal">
+            <article class="feature-card">
+              <div class="feature-img">
+                <img src="assets/projects/godavao.jpg" alt="GoDavao Screenshot" loading="lazy" />
+              </div>
+              <div class="feature-content">
+                <h3>GoDavao – Ridesharing App</h3>
+                <p>
+                  A GIS-powered rideshare app using OSRM routing, Dijkstra algorithm, real-time
+                  tracking, and dynamic pricing.
+                </p>
+                <span class="tech">Flutter • OSRM • GIS • Supabase</span>
+              </div>
             </article>
-            <article class="project-card">
-              <h3>Maviken ERP System</h3>
-              <p>CRM • Order Entry • Delivery Receipts • Billing • Maintenance • Expenses</p>
+
+            <article class="feature-card">
+              <div class="feature-img">
+                <img src="assets/projects/erp.jpg" alt="ERP Screenshot" loading="lazy" />
+              </div>
+              <div class="feature-content">
+                <h3>Maviken ERP System</h3>
+                <p>
+                  Complete business solution for trucking operations: Orders, Delivery Receipts,
+                  Billing, Maintenance, Expenses & Dashboards.
+                </p>
+                <span class="tech">Flutter • Supabase • SQL • PDF</span>
+              </div>
             </article>
-            <article class="project-card">
-              <h3>PylonEnergyCorp Website</h3>
-              <p>WordPress • Hostinger • Landing Page • Google Maps • Contact Form</p>
+
+            <article class="feature-card">
+              <div class="feature-img">
+                <img src="assets/projects/pylon.jpg" alt="PylonEnergyCorp Website" loading="lazy" />
+              </div>
+              <div class="feature-content">
+                <h3>PylonEnergyCorp Website</h3>
+                <p>
+                  A modern company website built with WordPress & Hostinger including Google Maps,
+                  product listings, and branded sections.
+                </p>
+                <span class="tech">WordPress • Hostinger • Web Design</span>
+              </div>
             </article>
-            <article class="project-card">
-              <h3>SK Portal</h3>
-              <p>HTML/CSS/JS • Project Showcase • Facebook API Auto-Fetch</p>
+
+            <article class="feature-card">
+              <div class="feature-img">
+                <img src="assets/projects/skportal.jpg" alt="SK Portal Screenshot" loading="lazy" />
+              </div>
+              <div class="feature-content">
+                <h3>SK Portal</h3>
+                <p>
+                  A youth council portal with dynamic project listings and auto-fetch Facebook posts
+                  using API integration.
+                </p>
+                <span class="tech">HTML • CSS • JS • FB API</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section skills" id="skills">
+      <!-- SKILLS -->
+      <section class="section skills reveal" id="skills">
         <div class="section__content">
           <p class="section__eyebrow">Skills</p>
           <h2>Capabilities</h2>
-          <div class="skills__list">
-            <div class="skill" data-skill="90">
-              <div class="skill__label">Flutter Development</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
+          <div class="capabilities reveal">
+            <div class="cap-card">
+              <h3>📱 Flutter App Development</h3>
+              <p>
+                I build performant, scalable mobile & web applications with clean architecture and
+                smooth UI.
+              </p>
             </div>
-            <div class="skill" data-skill="85">
-              <div class="skill__label">API Integrations (REST, Supabase)</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
+
+            <div class="cap-card">
+              <h3>🧾 ERP & Business Systems</h3>
+              <p>Custom systems covering orders, delivery receipts, invoicing, billing & dashboards.</p>
             </div>
-            <div class="skill" data-skill="88">
-              <div class="skill__label">Supabase / PostgreSQL</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
+
+            <div class="cap-card">
+              <h3>🗄️ Database & Cloud (Supabase / SQL)</h3>
+              <p>Secure auth, realtime data, SQL modeling, RLS policies, and serverless functions.</p>
             </div>
-            <div class="skill" data-skill="83">
-              <div class="skill__label">ERP &amp; Business Systems</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
+
+            <div class="cap-card">
+              <h3>🛰️ GIS Routing & OSRM</h3>
+              <p>Map routing, Dijkstra algorithm, travel optimization, and geo-data visualization.</p>
             </div>
-            <div class="skill" data-skill="80">
-              <div class="skill__label">Metabase Dashboards</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
-            </div>
-            <div class="skill" data-skill="78">
-              <div class="skill__label">UI/UX &amp; Web Design</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
-            </div>
-            <div class="skill" data-skill="72">
-              <div class="skill__label">WordPress Deployment</div>
-              <div class="skill__track"><span class="skill__value"></span></div>
+
+            <div class="cap-card">
+              <h3>🌐 Web Development</h3>
+              <p>WordPress, HTML/CSS/JS, branded websites, optimized landing pages, and deployments.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section contact" id="contact">
+      <!-- CONTACT -->
+      <section class="section contact reveal" id="contact">
         <div class="section__content">
           <p class="section__eyebrow">Contact</p>
           <h2>Let's Connect</h2>
+
           <form class="contact__form">
             <label>
               <span>Your Name</span>
               <input type="text" name="name" placeholder="Juan Dela Cruz" required />
             </label>
+
             <label>
               <span>Email Address</span>
               <input type="email" name="email" placeholder="name@email.com" required />
             </label>
+
             <label>
               <span>Message</span>
-              <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Tell me about your project"
+                required
+              ></textarea>
             </label>
+
             <button type="submit">Send Message</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <small>© <span id="year"></span> Raphael Vince S. Fernandez • Crafted with Flutter-inspired styling</small>
+    <!-- FOOTER -->
+    <footer class="footer reveal">
+      <small>
+        © <span id="year"></span> Raphael Vince S. Fernandez • Crafted with Flutter-inspired styling
+      </small>
     </footer>
 
     <script src="script.js"></script>
