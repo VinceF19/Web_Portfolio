@@ -1,0 +1,49 @@
+type User @table {
+  username: String!
+  email: String!
+  passwordHash: String!
+  createdAt: Timestamp!
+  displayName: String
+  bio: String
+  profilePictureUrl: String
+  contactEmail: String
+  phoneNumber: String
+  socialLinks: [String]
+}
+
+type Portfolio @table {
+  user: User!
+  title: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  description: String
+  customDomain: String
+  templateId: String
+  primaryColor: String
+  secondaryColor: String
+}
+
+type Project @table {
+  portfolio: Portfolio!
+  title: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  description: String
+  projectUrl: String
+  liveDemoUrl: String
+  category: String
+}
+
+type ProjectAsset @table {
+  project: Project!
+  assetUrl: String!
+  assetType: String!
+  orderIndex: Int!
+  caption: String
+}
+
+type Skill @table {
+  user: User!
+  name: String!
+  proficiencyLevel: String
+}
