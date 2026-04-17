@@ -456,6 +456,125 @@ main {
 
 
 /* =========================================================
+   EXPERIENCE / TIMELINE SECTION
+========================================================= */
+.experience {
+  background: var(--bg);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 2.5rem;
+  padding-left: 2rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--red), rgba(246, 0, 0, 0.1));
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot connector */
+.timeline__dot {
+  position: absolute;
+  left: -2.45rem;
+  top: 1.1rem;
+  width: 12px;
+  height: 12px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px rgba(246, 0, 0, 0.3);
+}
+
+.timeline__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.timeline__card:hover {
+  border-color: rgba(246, 0, 0, 0.4);
+  box-shadow: 0 4px 24px rgba(246, 0, 0, 0.1);
+}
+
+.timeline__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timeline__period {
+  font-size: 0.82rem;
+  color: var(--yellow);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.timeline__company {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.timeline__bullets {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.timeline__bullets li {
+  margin-bottom: 0.3rem;
+}
+
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline__dot {
+    left: -1.95rem;
+  }
+
+  .timeline__header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* =========================================================
    PROJECTS SECTION
 ========================================================= */
 .projects {
