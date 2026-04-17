@@ -4,7 +4,9 @@
 const eyebrow = document.querySelector('.hero__eyebrow');
 const roles = ['Full-Stack Developer', 'AI Data Specialist', 'ERP Systems Builder', 'Flutter Engineer'];
 
-if (eyebrow) {
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (eyebrow && !reducedMotion) {
   let roleIndex = 0;
   let charIndex = 0;
   let deleting = false;

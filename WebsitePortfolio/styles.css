@@ -333,6 +333,13 @@ img {
   .hero__scroll {
     animation: none;
   }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }
 
 
@@ -750,6 +757,7 @@ main {
   font-size: 1.4rem;
   font-weight: 700;
   color: white;
+  text-decoration: none;
 }
 
 .navbar.sticky .nav__logo {
@@ -942,6 +950,11 @@ main {
 
 .bento__card--placeholder .bento__overlay--always {
   background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 80%);
+}
+
+/* GoDavao placeholder — distinct gradient, add image to assets/projects/godavao.jpg to replace */
+.bento__card--godavao {
+  background: linear-gradient(135deg, rgba(0,80,160,0.25), rgba(246,0,0,0.10));
 }
 
 /* Bento responsive */
