@@ -1,31 +1,60 @@
 /* ------------------------------
+   TYPING EYEBROW ANIMATION
+------------------------------ */
+const eyebrow = document.querySelector('.hero__eyebrow');
+const roles = ['Full-Stack Developer', 'AI Data Specialist', 'ERP Systems Builder', 'Flutter Engineer'];
+
+if (eyebrow) {
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeRole() {
+    const current = roles[roleIndex];
+
+    if (!deleting) {
+      eyebrow.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(typeRole, 1800);
+        return;
+      }
+    } else {
+      eyebrow.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+
+    setTimeout(typeRole, deleting ? 45 : 80);
+  }
+
+  setTimeout(typeRole, 600);
+}
+
+
+/* ------------------------------
    HERO PARALLAX
 ------------------------------ */
 const hero = document.querySelector('.hero');
 const heroContent = document.querySelector('.hero__content');
-const heroEyebrow = document.querySelector('.hero__eyebrow');
-const heroSubtitle = document.querySelector('.hero__subtitle');
 
-if (hero) {
+if (hero && heroContent) {
   hero.addEventListener('pointermove', (e) => {
     const rect = hero.getBoundingClientRect();
     const relX = (e.clientX - rect.left) / rect.width - 0.5;
     const relY = (e.clientY - rect.top) / rect.height - 0.5;
-
-    const x = relX * 14;
-    const y = relY * 12;
-
-    heroContent.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    heroEyebrow.style.transform = `translate3d(${x * 0.5}px, ${y * 0.5}px, 0)`;
-    heroSubtitle.style.transform = `translate3d(${x * -0.4}px, ${y * -0.4}px, 0)`;
+    heroContent.style.transform = `translate3d(${relX * 10}px, ${relY * 8}px, 0)`;
   });
 
   hero.addEventListener('pointerleave', () => {
     heroContent.style.transform = '';
-    heroEyebrow.style.transform = '';
-    heroSubtitle.style.transform = '';
   });
 }
+
 
 /* ------------------------------
    CONTACT FORM HANDLER
@@ -44,21 +73,16 @@ if (contactForm) {
     try {
       const response = await fetch('https://formsubmit.co/ajax/Vince.fernandezg@gmail.com', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(Object.fromEntries(formData)),
       });
 
       if (!response.ok) throw new Error('Request failed');
-
       const result = await response.json();
       contactStatus.textContent = result.message || "Thanks! I'll respond shortly.";
       contactForm.reset();
-    } catch (error) {
-      contactStatus.textContent =
-        'Oops, failed to send. Please try again or email Vince.fernandezg@gmail.com.';
+    } catch {
+      contactStatus.textContent = 'Oops, failed to send. Please try again or email Vince.fernandezg@gmail.com.';
       contactStatus.classList.add('is-error');
     }
   });
@@ -87,7 +111,6 @@ if (navbar && navLinks.length) {
 
     scrollTimeout = setTimeout(() => {
       scrollTimeout = null;
-
       navbar.classList.toggle('sticky', window.scrollY > 80);
 
       let current = sections.length - 1;
@@ -119,7 +142,13 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
 
-// Stagger capability cards so they fade in sequentially with the reveal utility
-document.querySelectorAll('.cap-card').forEach((card, index) => {
-  card.style.transitionDelay = `${index * 0.15 + 0.1}s`;
+/* ------------------------------
+   STAGGER CAP CARDS + TIMELINE
+------------------------------ */
+document.querySelectorAll('.cap-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.12 + 0.1}s`;
+});
+
+document.querySelectorAll('.timeline__item').forEach((item, i) => {
+  item.style.transitionDelay = `${i * 0.1}s`;
 });
