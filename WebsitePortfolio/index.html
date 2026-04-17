@@ -33,30 +33,47 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="hero" id="hero">
-      <img
-        class="hero__bg"
-        src="assets/BG-hero.jpg"
-        alt="Abstract dark background"
-        loading="lazy"
-      />
-      <div class="hero__overlay"></div>
-      <div class="hero__content reveal">
-        <p class="hero__eyebrow">Information Systems • Full-Stack Dev • ERP Systems</p>
-        <h1 class="hero__title">Raphael Vince S. Fernandez</h1>
-        <p class="hero__subtitle">
-          👋 Hi, I’m Vince. I build fast, scalable systems that solve real business problems.
-        </p>
-        <div class="hero__photo" aria-label="Portrait of Raphael Vince S. Fernandez">
-          <div class="hero__photo-glow" aria-hidden="true"></div>
-          <img
-            src="assets/1x1.png"
-            alt="Raphael Vince S. Fernandez smiling"
-            loading="lazy"
-          />
-        </div>
+    <header class="hero noise" id="hero">
+  <div class="hero__mesh" aria-hidden="true"></div>
+  <div class="hero__content reveal">
+
+    <!-- LEFT: Text column -->
+    <div class="hero__text">
+      <span class="hero__badge">Available for Work · Davao, PH</span>
+      <p class="hero__eyebrow" aria-label="Role">Full-Stack Developer</p>
+      <h1 class="hero__title">RAPHAEL<br>VINCE<br>FERNANDEZ</h1>
+      <p class="hero__subtitle">
+        Building fast, scalable systems that solve real business problems.
+      </p>
+      <div class="hero__ctas">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn btn--outline" download>Download CV</a>
       </div>
-    </header>
+      <div class="hero__socials">
+        <a href="https://github.com/VinceF19" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.505.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="mailto:vince.fernandezg@gmail.com" aria-label="Email">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Photo column -->
+    <div class="hero__photo-wrap">
+      <div class="hero__photo" aria-label="Portrait of Raphael Vince S. Fernandez">
+        <div class="hero__photo-glow" aria-hidden="true"></div>
+        <img src="assets/1x1.png" alt="Raphael Vince S. Fernandez smiling" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll chevron -->
+  <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
+</header>
 
     <main>
       <!-- ABOUT -->
