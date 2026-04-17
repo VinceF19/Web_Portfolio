@@ -345,10 +345,10 @@ main {
 }
 
 .section {
-  min-height: 100vh;
+  min-height: auto;
+  padding: 5rem 1.5rem;
   display: flex;
   align-items: center;
-  padding: 4rem 1.5rem;
 }
 
 .section__content {
@@ -360,8 +360,9 @@ main {
   color: var(--yellow);
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
 }
 
 .section h2 {
@@ -426,8 +427,8 @@ main {
 ========================================================= */
 .marquee-section {
   min-height: auto;
-  padding: 0.2rem 0;
-  background: rgb(255, 255, 255);
+  padding: 0.5rem 0;
+  background: #f0efef;
   overflow: hidden;
 }
 
