@@ -102,6 +102,10 @@ img {
   gap: 3rem;
 }
 
+.hero__text {
+  min-width: 0;
+}
+
 /* Badge */
 .hero__badge {
   display: inline-block;
@@ -163,13 +167,13 @@ img {
   text-decoration: none;
   transition: var(--transition);
   cursor: pointer;
-  border: none;
 }
 
 .btn--primary {
   background: linear-gradient(135deg, var(--red), var(--red-deep));
   color: #fff;
   box-shadow: 0 4px 20px rgba(246, 0, 0, 0.35);
+  border: none;
 }
 
 .btn--primary:hover {
@@ -187,6 +191,18 @@ img {
   border-color: var(--yellow);
   color: var(--yellow);
   transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+.hero__scroll:focus-visible,
+.hero__socials a:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Social icons */
@@ -308,6 +324,14 @@ img {
 
   .hero__subtitle {
     margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo,
+  .hero__photo-glow,
+  .hero__scroll {
+    animation: none;
   }
 }
 
