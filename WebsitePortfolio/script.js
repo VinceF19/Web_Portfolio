@@ -2,7 +2,7 @@
    TYPING EYEBROW ANIMATION
 ------------------------------ */
 const eyebrow = document.querySelector('.hero__eyebrow');
-const roles = ['Full-Stack Developer', 'AI Data Specialist', 'ERP Systems Builder', 'Flutter Engineer'];
+const roles = ['Full-Stack Developer', 'Data Analyst', 'AI/QA Specialist', 'ERP Systems Builder'];
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

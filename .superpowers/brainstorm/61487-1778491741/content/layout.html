@@ -1,0 +1,139 @@
+<h2>Projects Section Layout</h2>
+<p class="subtitle">Three equal-card approaches — all minimal, all use real screenshots. Pick the one that feels right.</p>
+
+<style>
+  .preview-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 24px 0; }
+  .preview-card { background: #1a1918; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+  .preview-card:hover { border-color: rgba(246,0,0,0.5); }
+  .preview-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); padding: 10px 14px 4px; }
+
+  /* Option A: Hero + thumbnail strip */
+  .card-a .hero-img { width: 100%; height: 120px; background: #2a2927; display: flex; align-items: center; justify-content: center; overflow:hidden; }
+  .card-a .hero-img img { width:100%; height:100%; object-fit:cover; }
+  .card-a .thumb-strip { display: flex; gap: 4px; padding: 6px 8px; background: #111010; }
+  .card-a .thumb { width: 36px; height: 24px; background: #2a2927; border-radius: 3px; flex-shrink:0; overflow:hidden; }
+  .card-a .thumb img { width:100%; height:100%; object-fit:cover; }
+  .card-a .card-body { padding: 10px 12px 12px; }
+  .card-a .card-body h4 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-a .card-body p { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+  .card-a .tags { display:flex; gap:4px; flex-wrap:wrap; margin-top:8px; }
+  .card-a .tags span { font-size: 9px; padding: 2px 6px; background: rgba(246,0,0,0.12); border: 1px solid rgba(246,0,0,0.3); border-radius: 4px; color: rgba(246,0,0,0.9); }
+
+  /* Option B: Split - left image, right content + mini gallery */
+  .card-b { display:flex; min-height: 130px; }
+  .card-b .left { width: 45%; background: #2a2927; position:relative; overflow:hidden; flex-shrink:0; }
+  .card-b .left img { width:100%; height:100%; object-fit:cover; }
+  .card-b .right { flex:1; padding: 12px; display:flex; flex-direction:column; justify-content:space-between; }
+  .card-b .right h4 { font-size: 12px; font-weight: 600; color: #fff; margin-bottom:4px; }
+  .card-b .right p { font-size: 10px; color: rgba(255,255,255,0.45); line-height:1.4; flex:1; }
+  .card-b .mini-gallery { display:flex; gap:3px; margin-top:8px; }
+  .card-b .mini { width:28px; height:18px; background:#2a2927; border-radius:2px; overflow:hidden; }
+  .card-b .mini img { width:100%; height:100%; object-fit:cover; }
+  .card-b .right .tags { display:flex; gap:3px; flex-wrap:wrap; margin-top:6px; }
+  .card-b .right .tags span { font-size:9px; padding:2px 5px; background:rgba(246,0,0,0.1); border:1px solid rgba(246,0,0,0.25); border-radius:3px; color:rgba(246,0,0,0.85); }
+
+  /* Option C: Full-bleed image with overlay + dot indicators */
+  .card-c { position:relative; min-height:160px; }
+  .card-c .bg { width:100%; height:120px; background:#2a2927; overflow:hidden; }
+  .card-c .bg img { width:100%; height:100%; object-fit:cover; opacity:0.7; }
+  .card-c .card-body { padding:10px 12px 12px; }
+  .card-c .card-body h4 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom:3px; }
+  .card-c .card-body p { font-size: 11px; color:rgba(255,255,255,0.5); line-height:1.4; }
+  .card-c .dots { display:flex; gap:4px; margin-top:8px; align-items:center; }
+  .card-c .dot { width:16px; height:10px; border-radius:2px; background:#2a2927; overflow:hidden; }
+  .card-c .dot img { width:100%; height:100%; object-fit:cover; }
+  .card-c .dot.active { width:22px; border:1px solid rgba(246,0,0,0.5); }
+  .card-c .tags { display:flex; gap:4px; flex-wrap:wrap; margin-top:6px; }
+  .card-c .tags span { font-size:9px; padding:2px 6px; background:rgba(246,0,0,0.12); border:1px solid rgba(246,0,0,0.3); border-radius:4px; color:rgba(246,0,0,0.9); }
+
+  .rec-badge { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background: rgba(246,0,0,0.15); border: 1px solid rgba(246,0,0,0.4); color: #f60000; border-radius:4px; padding:2px 7px; margin-bottom:8px; }
+</style>
+
+<div class="cards">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0">
+      <div class="preview-label">Option A</div>
+      <div style="padding:0 10px 10px; font-size:10px; color:rgba(255,255,255,0.4); margin-bottom:6px;">Hero image + thumbnail strip below</div>
+      <div class="card-a" style="margin:0 10px 10px; border:1px solid rgba(255,255,255,0.08); border-radius:8px; overflow:hidden;">
+        <div class="hero-img">
+          <img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.39 PM.png" alt="SK" onerror="this.parentNode.innerHTML='<div style=\'color:rgba(255,255,255,0.3);font-size:10px\'>screenshot</div>'" />
+        </div>
+        <div class="thumb-strip">
+          <div class="thumb"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.55 PM.png" onerror="this.style.display='none'" /></div>
+          <div class="thumb"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.03 PM.png" onerror="this.style.display='none'" /></div>
+          <div class="thumb"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.28 PM.png" onerror="this.style.display='none'" /></div>
+          <div class="thumb"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.16.27 PM.png" onerror="this.style.display='none'" /></div>
+        </div>
+        <div class="card-body">
+          <h4>SK Provincial Portal</h4>
+          <p>Government youth council portal with live Facebook feed sync.</p>
+          <div class="tags"><span>React</span><span>Vite</span><span>Express.js</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Hero + Strip</h3>
+      <p>Main screenshot up top, row of small thumbnails below it. Clean separation between visuals and content. Best for projects with 4+ screenshots.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0">
+      <div class="preview-label">Option B <span class="rec-badge" style="margin-left:6px">Recommended</span></div>
+      <div style="padding:0 10px 10px; font-size:10px; color:rgba(255,255,255,0.4); margin-bottom:6px;">Split: image left, content + mini gallery right</div>
+      <div class="card-b" style="margin:0 10px 10px; border:1px solid rgba(255,255,255,0.08); border-radius:8px; overflow:hidden;">
+        <div class="left">
+          <img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.39 PM.png" onerror="this.style.display='none'" />
+        </div>
+        <div class="right">
+          <div>
+            <h4>SK Provincial Portal</h4>
+            <p>Government portal with live FB feed sync and multi-page navigation.</p>
+          </div>
+          <div class="tags"><span>React</span><span>Vite</span></div>
+          <div class="mini-gallery">
+            <div class="mini"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.55 PM.png" onerror="this.style.display='none'" /></div>
+            <div class="mini"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.03 PM.png" onerror="this.style.display='none'" /></div>
+            <div class="mini"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.28 PM.png" onerror="this.style.display='none'" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Split Layout</h3>
+      <p>Left half is main screenshot, right has title, description, tech tags, and mini gallery row. Compact and editorial — fits well in an equal grid.</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:0">
+      <div class="preview-label">Option C</div>
+      <div style="padding:0 10px 10px; font-size:10px; color:rgba(255,255,255,0.4); margin-bottom:6px;">Full-bleed hero + dot/filmstrip indicator row</div>
+      <div class="card-c" style="margin:0 10px 10px; border:1px solid rgba(255,255,255,0.08); border-radius:8px; overflow:hidden;">
+        <div class="bg">
+          <img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.39 PM.png" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <h4>SK Provincial Portal</h4>
+          <p>Government portal with live FB feed and React routing.</p>
+          <div class="tags"><span>React</span><span>Express.js</span></div>
+          <div class="dots">
+            <div class="dot active"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.39 PM.png" onerror="this.style.display='none'" /></div>
+            <div class="dot"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.14.55 PM.png" onerror="this.style.display='none'" /></div>
+            <div class="dot"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.03 PM.png" onerror="this.style.display='none'" /></div>
+            <div class="dot"><img src="/Users/vincefernandez/Documents/03_Development/GitHub/webport/WebsitePortfolio/assets/projects/SK portal/Screenshot 2026-05-11 at 5.15.28 PM.png" onerror="this.style.display='none'" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Full-bleed + Dots</h3>
+      <p>Wide screenshot dominates the top, small thumbnail "pill" indicators below the description show more screens exist. Minimal and bold.</p>
+    </div>
+  </div>
+
+</div>
